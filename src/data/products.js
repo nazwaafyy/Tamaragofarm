@@ -1,4 +1,4 @@
-import cabeImg from '../assets/images/cabe.png';
+
 import tomatImg from '../assets/images/tomat.png';
 import paprikaImg from '../assets/images/paprika.png';
 import buncisImg from '../assets/images/buncis.png';
@@ -9,7 +9,7 @@ export const products = [
     id: 'cabe',
     name: 'Cabe',
     category: 'Sayuran Buah & Bumbu',
-    image: cabeImg,
+    image: '/komoditas/Cabe.png',
     description: 'Cabe keriting merah dan hijau, cabe besar merah dan hijau, serta cabe rawit merah dan hijau segar dengan kualitas terbaik untuk kebutuhan rumah tangga, horeca, hingga industri pangan.',
     badge: 'Produk Unggulan',
   },
@@ -17,7 +17,7 @@ export const products = [
     id: 'tomat',
     name: 'Tomat',
     category: 'Sayuran Buah',
-    image: tomatImg,
+    image: '/komoditas/Tomat.png',
     description: 'Tomat segar pilihan dengan tekstur padat dan kualitas yang terjaga hingga ke tangan konsumen.',
     badge: 'Segar & Rekomendasi',
   },
