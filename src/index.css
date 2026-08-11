@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #174D25;
+  --color-secondary-green: #3F7D20;
+  --color-fresh-green: #7FAF28;
+  --color-lime-accent: #B7D334;
+  --color-light-green: #EEF5E8;
+  --color-cream-bg: #F7F7EF;
+  --color-dark-text: #1E2A20;
+  --color-muted-text: #667066;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F7EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #3F7D20;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #174D25;
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Smooth glassmorphism header backdrop */
+.glass-header {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-header-dark {
+  background: rgba(23, 77, 37, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
