@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <div className="space-y-24 pb-12">
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
         {/* Background Image with Dark Green Overlay */}
@@ -232,7 +232,7 @@ export default function Home() {
           description="Apresiasi dan pengakuan atas komitmen TamaraAgro Farm dalam pengembangan sektor agribisnis dan pemberdayaan pemuda tani."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
           {achievements.map((ach) => (
             <AchievementCard key={ach.id} achievement={ach} />
           ))}

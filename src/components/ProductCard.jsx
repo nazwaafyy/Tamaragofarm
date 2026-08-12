@@ -16,7 +16,7 @@ export default function ProductCard({ product }) {
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
-        
+
         {/* Badge */}
         {product.badge && (
           <div className="absolute top-3 right-3 bg-[#174D25]/90 backdrop-blur-md text-[#B7D334] text-xs font-bold px-3 py-1 rounded-full shadow-md border border-[#7FAF28]/30">
@@ -51,8 +51,6 @@ export default function ProductCard({ product }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs font-bold text-[#174D25] hover:text-[#3F7D20] group-hover:translate-x-1 transition-all"
           >
-            <span>Pesan</span>
-            <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>
