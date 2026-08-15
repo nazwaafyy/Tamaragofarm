@@ -43,6 +43,7 @@ export default function SEO({
     setMeta('name', 'author', 'CV Tamara Agro Indonesia');
     setMeta('name', 'robots', 'index, follow');
     setMeta('name', 'theme-color', '#174D25');
+    setMeta('name', 'thumbnail', `${siteUrl}${ogImage}`);
 
     // Open Graph
     setMeta('property', 'og:title', fullTitle);
