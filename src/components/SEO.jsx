@@ -50,6 +50,9 @@ export default function SEO({
     setMeta('property', 'og:type', ogType);
     setMeta('property', 'og:url', canonicalUrl);
     setMeta('property', 'og:image', `${siteUrl}${ogImage}`);
+    setMeta('property', 'og:image:secure_url', `${siteUrl}${ogImage}`);
+    const imgType = ogImage.toLowerCase().endsWith('.png') ? 'image/png' : ogImage.toLowerCase().endsWith('.webp') ? 'image/webp' : 'image/jpeg';
+    setMeta('property', 'og:image:type', imgType);
     setMeta('property', 'og:image:width', '1200');
     setMeta('property', 'og:image:height', '630');
     setMeta('property', 'og:site_name', siteName);
