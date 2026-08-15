@@ -1,8 +1,7 @@
 import React from 'react';
 import SectionTitle from '../components/SectionTitle';
 import CTASection from '../components/CTASection';
-import { Users, BarChart3, Calendar, ClipboardCheck, ArrowRight, ShieldCheck } from 'lucide-react';
-import heroFarmImg from '../assets/images/hero_farm.png';
+import { Users, BarChart3, Calendar, ClipboardCheck, ShieldCheck } from 'lucide-react';
 
 export default function Consultation() {
   const processSteps = [
@@ -31,23 +30,33 @@ export default function Consultation() {
   const features = [
     {
       title: 'Analisis Usaha Tani',
-      desc: 'Evaluasi potensi lahan, kualitas tanah/air, serta analisis kelayakan finansial budidaya.'
+      desc: 'Evaluasi potensi lahan, pengujian kualitas tanah dan air, serta analisis kelayakan kelayakan finansial budidaya.',
+      icon: BarChart3,
+      image: '/layanan/Konsultasi/Analisis.png'
     },
     {
       title: 'Perencanaan Budidaya',
-      desc: 'Penyusunan jadwal tanam, pemilihan varietas benih unggul, dan formulasi nutrisi tanaman.'
+      desc: 'Penyusunan jadwal tanam, pemilihan varietas benih unggul, rekomendasi pupuk, dan formulasi nutrisi tanaman.',
+      icon: Calendar,
+      image: '/layanan/Konsultasi/Perencanaan.png'
     },
     {
       title: 'Monitoring Budidaya',
-      desc: 'Pendampingan pencegahan hama penyakit (HPT) dan pengawasan pelaksanaan SOP.'
+      desc: 'Pendampingan pencegahan hama penyakit (HPT), pengawasan SOP kebun, serta pemantauan pertumbuhan tanaman.',
+      icon: ClipboardCheck,
+      image: '/layanan/Konsultasi/Monitoring.png'
     },
     {
       title: 'Pendampingan Hulu hingga Hilir',
-      desc: 'Bimbingan komprehensif mulai dari olah tanah awal hingga penanganan pascapanen.'
+      desc: 'Bimbingan teknis komprehensif mulai dari persiapan olah tanah awal, perawatan harian, hingga penanganan pascapanen.',
+      icon: Users,
+      image: '/layanan/Konsultasi/Pendampingan.png'
     },
     {
       title: 'Penyerapan Hasil Produksi',
-      desc: 'Menghubungkan hasil panen ke ekosistem jaringan pembeli dan mitra industri TamaraAgro Farm.'
+      desc: 'Menghubungkan hasil panen ke ekosistem jaringan pembeli, retail modern, dan mitra industri TamaraAgro Farm.',
+      icon: ShieldCheck,
+      image: '/layanan/Konsultasi/Penyerapan.png'
     }
   ];
 
@@ -55,17 +64,17 @@ export default function Consultation() {
     <div className="pt-24 pb-12 space-y-16">
       
       {/* Header Banner */}
-      <section className="relative bg-[#174D25] text-white py-16 sm:py-24 overflow-hidden">
+      <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={heroFarmImg}
+            src="/layanan/Konsultasi.png"
             alt="Konsultasi Pertanian TamaraAgro Farm"
-            className="w-full h-full object-cover opacity-25 scale-105"
+            className="w-full h-full object-cover scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#174D25]/90 via-[#174D25] to-[#174D25]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#174D25]/90 via-[#174D25]/75 to-[#3F7D20]/60"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 w-full">
           <span className="bg-[#3F7D20] text-[#B7D334] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider border border-[#7FAF28]/40">
             Pendampingan Profesional
           </span>
@@ -78,7 +87,60 @@ export default function Consultation() {
         </div>
       </section>
 
-      {/* Process Steps Section */}
+      {/* REORDERED: 1. Cakupan Layanan (Features Showcase) First */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div className="max-w-3xl space-y-4">
+          <span className="text-xs font-extrabold text-[#3F7D20] uppercase tracking-wider bg-[#EEF5E8] px-3.5 py-1 rounded-full">
+            Cakupan Layanan
+          </span>
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#174D25]">
+            Fitur & Keunggulan Konsultasi
+          </h2>
+          <p className="text-base text-[#667066] leading-relaxed">
+            Pendampingan intensif oleh praktisi ahli yang berpengalaman langsung mengelola perkebunan komersial skala retail dan industri.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
+          {features.map((feat, idx) => {
+            const IconComp = feat.icon;
+            return (
+              <div 
+                key={idx} 
+                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-[#EEF5E8] hover:shadow-2xl hover:border-[#7FAF28]/40 transition-all duration-500 group flex flex-col h-full"
+              >
+                {/* Header Image (Full-bleed) */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={feat.image}
+                    alt={feat.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                </div>
+
+                {/* Card Content & Overlapping Icon */}
+                <div className="px-6 pb-6 pt-10 relative flex-grow flex flex-col justify-between">
+                  <div className="absolute -top-7 left-6 w-14 h-14 bg-[#174D25] text-[#B7D334] rounded-2xl flex items-center justify-center shadow-md border-4 border-white group-hover:scale-110 group-hover:bg-[#3F7D20] transition-all duration-300">
+                    <IconComp className="w-6 h-6" />
+                  </div>
+
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-black text-[#174D25] group-hover:text-[#3F7D20] transition-colors leading-tight">
+                      {feat.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#667066] leading-relaxed">
+                      {feat.desc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* REORDERED: 2. Metodologi Kerja (Process Steps) Second */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <SectionTitle
           eyebrow="Metodologi Kerja"
@@ -86,42 +148,27 @@ export default function Consultation() {
           description="4 tahapan terstruktur pendampingan dari awal perencanaan hingga evaluasi hasil."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {processSteps.map((item) => (
-            <div key={item.step} className="bg-white rounded-3xl p-8 border border-[#EEF5E8] shadow-sm hover:shadow-lg transition-all space-y-4 relative group">
-              <span className="text-4xl font-black text-[#B7D334] group-hover:text-[#174D25] transition-colors">
-                {item.step}
-              </span>
-              <h3 className="text-xl font-extrabold text-[#174D25]">
-                {item.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-[#667066] leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <div className="relative">
+          {/* Horizontal Connector Line on Desktop (Centered vertically relative to the w-16 bubble) */}
+          <div className="hidden lg:block absolute left-24 right-24 top-8 h-1 bg-[#EEF5E8] z-0"></div>
 
-      {/* Features Detail */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div className="bg-[#EEF5E8] rounded-3xl p-8 sm:p-12 border border-[#7FAF28]/30 space-y-8">
-          <SectionTitle
-            eyebrow="Cakupan Layanan"
-            title="Fitur & Keunggulan Konsultasi"
-            description="Pendampingan intensif oleh praktisi yang berpengalaman mengelola kebun komersial."
-          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+            {processSteps.map((item) => (
+              <div key={item.step} className="flex flex-col items-center text-center space-y-4 group">
+                {/* Timeline Step Bubble */}
+                <div className="w-16 h-16 rounded-2xl bg-white border-2 border-[#EEF5E8] group-hover:border-[#7FAF28] group-hover:bg-[#174D25] group-hover:text-[#B7D334] shadow-md flex items-center justify-center text-[#174D25] font-black text-xl transition-all duration-300 transform group-hover:scale-110 z-10 shrink-0">
+                  {item.step}
+                </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feat, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-6 border border-[#EEF5E8] shadow-sm space-y-2">
-                <h4 className="font-extrabold text-[#174D25] text-base flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-[#7FAF28]" />
-                  <span>{feat.title}</span>
-                </h4>
-                <p className="text-xs text-[#667066] leading-relaxed">
-                  {feat.desc}
-                </p>
+                {/* Detail Card */}
+                <div className="bg-white rounded-3xl p-6 border border-[#EEF5E8] shadow-sm hover:shadow-lg transition-all w-full flex-grow">
+                  <h3 className="text-base font-extrabold text-[#174D25] group-hover:text-[#3F7D20] transition-colors mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#667066] leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

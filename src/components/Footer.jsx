@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sprout, MapPin, Mail, Phone, ArrowUpRight } from 'lucide-react';
+import { MapPin, Mail, Phone, ArrowUpRight } from 'lucide-react';
 
 export default function Footer() {
   const whatsappUrl = "https://wa.me/6285779682328?text=Halo%20TamaraAgro%20Farm,%20saya%20tertarik%20mengenai%20produk%20dan%20layanan%20CV%20Tamara%20Agro%20Indonesia.";
@@ -15,8 +15,12 @@ export default function Footer() {
           {/* Col 1: Brand Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl bg-[#3F7D20] flex items-center justify-center text-[#B7D334]">
-                <Sprout className="w-6 h-6" />
+              <div className="w-10 h-10 rounded-xl bg-[#3F7D20] flex items-center justify-center p-1.5 shadow-sm">
+                <img
+                  src="/Logo-Tamara.png"
+                  alt="Logo TamaraAgro Farm"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-extrabold text-2xl tracking-tight text-white">
                 TamaraAgro <span className="text-[#B7D334]">Farm</span>
@@ -109,11 +113,16 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-[#EEF5E8]/90">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#B7D334] shrink-0 mt-0.5" />
-                <span>
+                <a
+                  href="https://maps.app.goo.gl/tNb4vQEK4A6B32xY8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#B7D334] transition-colors leading-relaxed text-left"
+                >
                   Jl. Batusela, Selaawi,<br />
                   Kec. Sukaraja, Kabupaten Sukabumi,<br />
                   Jawa Barat 43192
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#B7D334] shrink-0" />
@@ -133,9 +142,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#EEF5E8]/60">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#EEF5E8]/60 text-center sm:text-left">
           <p>Copyright © 2026 CV Tamara Agro Farm. All rights reserved.</p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap justify-center sm:justify-start gap-4">
             <span>Kabupaten Sukabumi, Jawa Barat</span>
             <span>•</span>
             <span>Agribisnis & Hortikultura</span>

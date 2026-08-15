@@ -3,24 +3,23 @@ import SectionTitle from '../components/SectionTitle';
 import ServiceCard from '../components/ServiceCard';
 import CTASection from '../components/CTASection';
 import { services } from '../data/services';
-import heroFarmImg from '../assets/images/hero_farm.png';
 
 export default function Services() {
   return (
     <div className="pt-24 pb-12 space-y-16">
       
       {/* Header Banner */}
-      <section className="relative bg-[#174D25] text-white py-16 sm:py-24 overflow-hidden">
+      <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={heroFarmImg}
+            src="/header_bg.webp"
             alt="Layanan TamaraAgro Farm"
-            className="w-full h-full object-cover opacity-25 scale-105"
+            className="w-full h-full object-cover scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#174D25]/90 via-[#174D25] to-[#174D25]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#174D25]/90 via-[#174D25]/75 to-[#3F7D20]/60"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 w-full">
           <span className="bg-[#3F7D20] text-[#B7D334] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider border border-[#7FAF28]/40">
             Layanan & Solusi Agribisnis
           </span>

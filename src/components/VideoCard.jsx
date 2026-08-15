@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Film, Clock, X } from 'lucide-react';
+import { Play, Film, Clock, X, ArrowRight } from 'lucide-react';
 
 export default function VideoCard({ video }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -61,36 +61,84 @@ export default function VideoCard({ video }) {
         </div>
       </div>
 
-      {/* Video Modal Placeholder */}
+      {/* Video Modal Player */}
       {modalOpen && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-2xl w-full p-6 space-y-4 relative animate-in fade-in zoom-in-95 duration-200">
-            <div className="flex items-center justify-between border-b border-[#EEF5E8] pb-4">
-              <h3 className="text-lg font-extrabold text-[#174D25]">
-                {video.title}
-              </h3>
+          <div className="bg-white rounded-3xl max-w-3xl w-full p-5 space-y-4 relative animate-in fade-in zoom-in-95 duration-200 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-[#EEF5E8] pb-3">
+              <div className="flex flex-col">
+                <span className="text-[10px] font-extrabold text-[#7FAF28] uppercase tracking-wider">
+                  {video.category}
+                </span>
+                <h3 className="text-base sm:text-lg font-extrabold text-[#174D25] leading-snug">
+                  {video.title}
+                </h3>
+              </div>
               <button
                 onClick={() => setModalOpen(false)}
-                className="p-2 rounded-full hover:bg-[#EEF5E8] text-[#1E2A20]"
+                className="p-2 rounded-full hover:bg-[#EEF5E8] text-[#1E2A20] transition-colors shrink-0"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <div className="aspect-video bg-[#174D25] rounded-2xl flex flex-col items-center justify-center text-white p-6 text-center space-y-3">
-              <Film className="w-12 h-12 text-[#B7D334]" />
-              <h4 className="font-bold text-lg">{video.title}</h4>
-              <p className="text-xs text-[#EEF5E8]/80 max-w-md">
-                Dokumentasi kegiatan dan liputan media resmi CV Tamara Agro Indonesia.
-              </p>
-              <a
-                href="https://wa.me/6285779682328?text=Halo%20TamaraAgro%20Farm,%20saya%20tertarik%20dengan%20video%20dokumentasi."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-flex items-center gap-2 bg-[#B7D334] text-[#174D25] px-5 py-2 rounded-full text-xs font-extrabold"
-              >
-                Tanya Detail Kegiatan via WhatsApp
-              </a>
-            </div>
+            
+            {video.embedUrl ? (
+              <div className="aspect-video w-full rounded-2xl overflow-hidden bg-black shadow-inner">
+                <iframe
+                  src={video.embedUrl}
+                  title={video.title}
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            ) : video.videoPath ? (
+              <div className="space-y-4">
+                <div className="aspect-video w-full rounded-2xl overflow-hidden bg-black shadow-inner">
+                  <video
+                    src={video.videoPath}
+                    controls
+                    autoPlay
+                    poster={video.thumbnail}
+                    className="w-full h-full object-contain"
+                  ></video>
+                </div>
+                {video.url && (
+                  <div className="flex justify-center pt-1">
+                    <a
+                      href={video.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-[#EEF5E8] hover:bg-[#DCEAD0] text-[#174D25] px-5 py-2.5 rounded-full text-xs font-bold transition-all shadow-sm group"
+                    >
+                      <span>Tonton di Instagram Reels</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                    </a>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="aspect-video bg-[#174D25] rounded-2xl flex flex-col items-center justify-center text-white p-6 text-center space-y-4 shadow-inner">
+                <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-[#B7D334] shadow-md">
+                  <Film className="w-8 h-8" />
+                </div>
+                <div className="space-y-1">
+                  <h4 className="font-extrabold text-base sm:text-lg max-w-md mx-auto">{video.title}</h4>
+                  <p className="text-xs text-[#EEF5E8]/80 max-w-sm mx-auto">
+                    Video ini diunggah pada platform Instagram. Silakan klik tombol di bawah untuk menonton langsung di Instagram Reels.
+                  </p>
+                </div>
+                <a
+                  href={video.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#B7D334] hover:bg-[#a5c228] text-[#174D25] px-6 py-3 rounded-full text-xs font-extrabold transition-colors shadow-md group"
+                >
+                  <span>Tonton di Instagram Reels</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+            )}
           </div>
         </div>
       )}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { PhoneCall, ArrowRight, MessageSquareCheck } from 'lucide-react';
-import heroFarmImg from '../assets/images/hero_farm.png';
+import heroFarmImg from '../assets/images/hero_farm.webp';
 
 export default function CTASection({
   headline = "Siap berdiskusi mengenai kemitraan, budidaya, penelitian, atau program magang?",

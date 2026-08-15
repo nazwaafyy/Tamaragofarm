@@ -33,8 +33,7 @@ import { partnersData } from '../data/partners';
 import { videoDocumentation } from '../data/documentation';
 import { publications } from '../data/publications';
 
-import heroFarmImg from '../assets/images/hero_farm.png';
-import aboutFarmImg from '../assets/images/about_farm.png';
+import heroFarmImg from '../assets/images/hero_farm.webp';
 
 export default function Home() {
   const [activeTestimonialIdx, setActiveTestimonialIdx] = useState(0);
@@ -53,7 +52,7 @@ export default function Home() {
     <div className="space-y-24 pb-12">
 
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center justify-center pt-28 pb-20 overflow-hidden">
         {/* Background Image with Dark Green Overlay */}
         <div className="absolute inset-0 z-0">
           <img
@@ -61,7 +60,7 @@ export default function Home() {
             alt="Kebun Hortikultura TamaraAgro Farm Sukabumi"
             className="w-full h-full object-cover scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#174D25]/95 via-[#174D25]/85 to-[#3F7D20]/75"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#174D25]/90 via-[#174D25]/75 to-[#3F7D20]/60"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white space-y-8 pt-8">
@@ -87,25 +86,6 @@ export default function Home() {
               Hubungi Kami
             </Button>
           </div>
-
-          {/* Floating Statistics Card at Bottom Hero */}
-          <div className="pt-12 max-w-4xl mx-auto">
-            <div className="bg-white/95 backdrop-blur-md text-[#1E2A20] rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/20 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-              <div className="space-y-1 border-b sm:border-b-0 sm:border-r border-[#EEF5E8] pb-4 sm:pb-0">
-                <div className="text-3xl sm:text-4xl font-black text-[#174D25]">20+</div>
-                <div className="text-xs sm:text-sm font-semibold text-[#667066]">Komoditas Hortikultura</div>
-              </div>
-              <div className="space-y-1 border-b sm:border-b-0 sm:border-r border-[#EEF5E8] pb-4 sm:pb-0">
-                <div className="text-3xl sm:text-4xl font-black text-[#3F7D20]">20+</div>
-                <div className="text-xs sm:text-sm font-semibold text-[#667066]">Mitra Strategis</div>
-              </div>
-              <div className="space-y-1">
-                <div className="text-3xl sm:text-4xl font-black text-[#7FAF28]">100+</div>
-                <div className="text-xs sm:text-sm font-semibold text-[#667066]">Petani Lokal Diberdayakan</div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -162,21 +142,25 @@ export default function Home() {
 
       {/* 4. TENTANG / COMPANY INTRODUCTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#EEF5E8] shadow-lg grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left: Image */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl group">
-            <img
-              src={aboutFarmImg}
-              alt="Tim Pertanian TamaraAgro Farm Sukabumi"
-              className="w-full h-[400px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#174D25]/80 via-transparent to-transparent"></div>
-            <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
-              <span className="bg-[#B7D334] text-[#174D25] text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
-                Sukabumi, Jawa Barat
-              </span>
-              <h3 className="text-lg font-bold">Kecamatan Sukaraja</h3>
-              <p className="text-xs text-[#EEF5E8]/80">Pusat pemberdayaan petani binaan agribisnis hortikultura</p>
+        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#EEF5E8] shadow-lg grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+          {/* Left: Tim Manajemen (Iqbal & Resi) */}
+          <div className="flex flex-col gap-4 w-full h-full min-h-[400px] sm:min-h-[500px]">
+            {/* Pendiri 1: Iqbal Habibi */}
+            <div className="relative flex-1 rounded-3xl overflow-hidden shadow-xl border border-[#EEF5E8]">
+              <img
+                src="/people/1.png"
+                alt="Iqbal Habibi - Pendiri TamaraAgro Farm"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Pendiri 2: Resi */}
+            <div className="relative flex-1 rounded-3xl overflow-hidden shadow-xl border border-[#EEF5E8]">
+              <img
+                src="/people/2.png"
+                alt="Resi - Co-founder TamaraAgro Farm"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -326,13 +310,17 @@ export default function Home() {
                 {cat.partners.map((partner, pIdx) => (
                   <div
                     key={pIdx}
-                    className="bg-white rounded-2xl p-4 border border-[#EEF5E8] shadow-sm hover:shadow-md hover:border-[#7FAF28] transition-all text-center flex flex-col items-center justify-center h-24 group"
+                    className="bg-white rounded-2xl p-3 border border-[#EEF5E8] shadow-sm hover:shadow-md hover:border-[#7FAF28] transition-all text-center flex flex-col items-center justify-between h-28 group relative overflow-hidden"
                   >
-                    <span className="text-xs sm:text-sm font-bold text-[#174D25] group-hover:text-[#3F7D20] transition-colors line-clamp-2">
+                    <div className="flex-grow flex items-center justify-center w-full h-12">
+                      <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        className="max-h-12 max-w-[90%] object-contain transition-all duration-300 group-hover:scale-105"
+                      />
+                    </div>
+                    <span className="text-[10px] sm:text-[11px] font-bold text-[#174D25] group-hover:text-[#3F7D20] transition-colors line-clamp-1 w-full mt-1.5">
                       {partner.name}
-                    </span>
-                    <span className="text-[10px] text-[#667066] mt-1 font-medium">
-                      {partner.type}
                     </span>
                   </div>
                 ))}

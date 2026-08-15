@@ -4,8 +4,6 @@ import Timeline from '../components/Timeline';
 import CTASection from '../components/CTASection';
 import { Target, Compass, CheckCircle2, ShieldCheck, HeartHandshake, Leaf, Award } from 'lucide-react';
 
-import aboutFarmImg from '../assets/images/about_farm.png';
-import heroFarmImg from '../assets/images/hero_farm.png';
 
 export default function About() {
   const missions = [
@@ -40,17 +38,17 @@ export default function About() {
     <div className="pt-24 pb-12 space-y-20">
       
       {/* Header Banner */}
-      <section className="relative bg-[#174D25] text-white py-16 sm:py-24 overflow-hidden">
+      <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={heroFarmImg}
+            src="/header_bg.webp"
             alt="Profil TamaraAgro Farm"
-            className="w-full h-full object-cover opacity-25 scale-105"
+            className="w-full h-full object-cover scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#174D25]/90 via-[#174D25] to-[#174D25]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#174D25]/90 via-[#174D25]/75 to-[#3F7D20]/60"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 w-full">
           <span className="bg-[#3F7D20] text-[#B7D334] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider border border-[#7FAF28]/40">
             Profil Perusahaan
           </span>
@@ -65,7 +63,7 @@ export default function About() {
 
       {/* Latar Belakang & Masalah & Solusi */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           <div className="space-y-6">
             <SectionTitle
               align="left"
@@ -110,19 +108,24 @@ export default function About() {
             </div>
           </div>
 
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-            <img
-              src={aboutFarmImg}
-              alt="Lahan Hortikultura TamaraAgro Farm Sukabumi"
-              className="w-full h-[550px] object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#174D25]/90 via-transparent to-transparent"></div>
-            <div className="absolute bottom-8 left-8 right-8 text-white space-y-2">
-              <span className="bg-[#B7D334] text-[#174D25] text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider">
-                Kecamatan Sukaraja, Sukabumi
-              </span>
-              <h3 className="text-2xl font-extrabold">CV Tamara Agro Indonesia</h3>
-              <p className="text-xs text-[#EEF5E8]/80">Pemberdayaan Petani Binaan & Jaringan Pasar Modern Retail</p>
+          {/* Right: Tim Manajemen (Iqbal & Resi) */}
+          <div className="flex flex-col gap-4 w-full h-full min-h-[400px] sm:min-h-[500px]">
+            {/* Pendiri 1: Iqbal Habibi */}
+            <div className="relative flex-1 rounded-3xl overflow-hidden shadow-xl border border-[#EEF5E8]">
+              <img
+                src="/people/1.png"
+                alt="Iqbal Habibi - Pendiri TamaraAgro Farm"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Pendiri 2: Resi */}
+            <div className="relative flex-1 rounded-3xl overflow-hidden shadow-xl border border-[#EEF5E8]">
+              <img
+                src="/people/2.png"
+                alt="Resi - Co-founder TamaraAgro Farm"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -177,7 +180,6 @@ export default function About() {
               ))}
             </div>
           </div>
-
         </div>
       </section>
 
@@ -190,6 +192,65 @@ export default function About() {
         />
 
         <Timeline />
+      </section>
+
+      {/* LOKASI PERUSAHAAN (MAPS EMBED) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <SectionTitle
+          eyebrow="Lokasi Kami"
+          title="Kantor & Lahan Kebun Binaan"
+          description="Kunjungi kantor administrasi dan area budidaya kami di Kecamatan Sukaraja, Kabupaten Sukabumi, Jawa Barat."
+        />
+
+        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#EEF5E8] shadow-lg space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            {/* Location Info */}
+            <div className="lg:col-span-1 space-y-5">
+              <div className="p-5 bg-[#F7F7EF] rounded-2xl border-l-4 border-[#3F7D20] space-y-2">
+                <h4 className="font-extrabold text-[#174D25] text-sm">Alamat Operasional</h4>
+                <p className="text-xs sm:text-sm text-[#667066] leading-relaxed">
+                  Jl. Batusela, Selaawi, Kec. Sukaraja, Kabupaten Sukabumi, Jawa Barat 43192
+                </p>
+              </div>
+              <div className="p-5 bg-[#EEF5E8] rounded-2xl border-l-4 border-[#7FAF28] space-y-1">
+                <h4 className="font-extrabold text-[#174D25] text-sm">Jam Kunjungan Kemitraan</h4>
+                <p className="text-xs text-[#667066] leading-relaxed">
+                  Senin - Sabtu: 08.00 - 17.00 WIB
+                </p>
+                <p className="text-[10px] text-[#7FAF28] italic font-semibold">
+                  *Harap konfirmasi janji temu terlebih dahulu via WhatsApp
+                </p>
+              </div>
+              <div className="pt-2">
+                <a
+                  href="https://maps.app.goo.gl/tNb4vQEK4A6B32xY8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 bg-[#174D25] hover:bg-[#3F7D20] text-white py-3 px-6 rounded-full font-bold shadow-md text-xs transition-all group"
+                >
+                  <span>Buka Google Maps</span>
+                  <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Embedded Iframe */}
+            <div className="lg:col-span-2 w-full h-[320px] sm:h-[380px] overflow-hidden rounded-2xl border border-[#EEF5E8] shadow-inner bg-[#F7F7EF]">
+              <iframe
+                src="https://maps.google.com/maps?q=Tamara%20Agro%20Farm%2C%20Jl.%20Batusela%2C%20Selaawi%2C%20Kec.%20Sukaraja%2C%20Kabupaten%20Sukabumi%2C%20Jawa%20Barat%2043192&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Maps Lokasi TamaraAgro Farm"
+              ></iframe>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* CTA BANNER */}

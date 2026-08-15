@@ -26,9 +26,14 @@ export default function ContactCard() {
           </div>
           <div>
             <h4 className="font-bold text-[#174D25] text-base">Alamat Lengkap</h4>
-            <p className="text-sm text-[#667066] leading-relaxed mt-1">
+            <a
+              href="https://maps.app.goo.gl/tNb4vQEK4A6B32xY8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-[#3F7D20] hover:underline font-semibold mt-1 block leading-relaxed"
+            >
               Jl. Batusela, Selaawi, Kec. Sukaraja, Kabupaten Sukabumi, Jawa Barat 43192
-            </p>
+            </a>
           </div>
         </div>
 

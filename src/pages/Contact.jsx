@@ -3,7 +3,6 @@ import SectionTitle from '../components/SectionTitle';
 import ContactCard from '../components/ContactCard';
 import CTASection from '../components/CTASection';
 import { PhoneCall, Send, MapPin, CheckCircle2 } from 'lucide-react';
-import heroFarmImg from '../assets/images/hero_farm.png';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -24,17 +23,17 @@ export default function Contact() {
     <div className="pt-24 pb-12 space-y-16">
       
       {/* Header Banner */}
-      <section className="relative bg-[#174D25] text-white py-16 sm:py-24 overflow-hidden">
+      <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src={heroFarmImg}
+            src="/header_bg.webp"
             alt="Kontak TamaraAgro Farm"
-            className="w-full h-full object-cover opacity-25 scale-105"
+            className="w-full h-full object-cover scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#174D25]/90 via-[#174D25] to-[#174D25]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#174D25]/90 via-[#174D25]/75 to-[#3F7D20]/60"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 w-full">
           <span className="bg-[#3F7D20] text-[#B7D334] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider border border-[#7FAF28]/40">
             Komunikasi & Layanan
           </span>
@@ -167,21 +166,30 @@ export default function Contact() {
             Jl. Batusela, Selaawi, Kec. Sukaraja, Kabupaten Sukabumi, Jawa Barat 43192
           </p>
 
-          <div className="w-full h-72 bg-[#EEF5E8] rounded-2xl flex flex-col items-center justify-center text-center p-6 border border-[#7FAF28]/30 space-y-3">
-            <div className="w-14 h-14 rounded-full bg-[#174D25] text-[#B7D334] flex items-center justify-center shadow-lg">
-              <MapPin className="w-7 h-7" />
-            </div>
-            <h4 className="font-extrabold text-[#174D25] text-lg">CV Tamara Agro Indonesia (TamaraAgro Farm)</h4>
-            <p className="text-xs text-[#667066] max-w-md">
-              Kecamatan Sukaraja, Kabupaten Sukabumi, Jawa Barat. Terbuka untuk kunjungan kerja sama, magang, dan konsultasi lapangan.
-            </p>
+          <div className="w-full h-[400px] overflow-hidden rounded-2xl border border-[#EEF5E8] shadow-inner bg-[#F7F7EF]">
+            <iframe
+              src="https://maps.google.com/maps?q=Tamara%20Agro%20Farm%2C%20Jl.%20Batusela%2C%20Selaawi%2C%20Kec.%20Sukaraja%2C%20Kabupaten%20Sukabumi%2C%20Jawa%20Barat%2043192&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Maps Lokasi TamaraAgro Farm"
+            ></iframe>
+          </div>
+          
+          <div className="flex justify-center pt-2">
             <a
-              href="https://maps.google.com/?q=Sukaraja+Sukabumi+Jawa+Barat"
+              href="https://maps.app.goo.gl/tNb4vQEK4A6B32xY8"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#174D25] text-white px-5 py-2.5 rounded-full text-xs font-bold shadow-md hover:bg-[#3F7D20]"
+              className="inline-flex items-center gap-2 bg-[#174D25] hover:bg-[#3F7D20] text-white px-6 py-3 rounded-full text-xs font-bold shadow-md transition-all group"
             >
               <span>Buka Petunjuk Arah Google Maps</span>
+              <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             </a>
           </div>
         </div>
