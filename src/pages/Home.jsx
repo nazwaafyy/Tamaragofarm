@@ -85,11 +85,11 @@ export default function Home() {
             Perusahaan hortikultura yang berkomitmen menghadirkan produk pertanian berkualitas melalui budidaya berkelanjutan, kemitraan strategis serta inovasi di sektor agribisnis.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button to="/tentang-kami" variant="lime" size="lg">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 pt-4 w-full max-w-sm sm:max-w-none mx-auto px-4">
+            <Button to="/tentang-kami" variant="lime" size="lg" className="w-full sm:w-auto">
               Kenali TamaraAgro
             </Button>
-            <Button href={whatsappUrl} variant="white" size="lg">
+            <Button href={whatsappUrl} variant="white" size="lg" className="w-full sm:w-auto">
               Hubungi Kami
             </Button>
           </div>

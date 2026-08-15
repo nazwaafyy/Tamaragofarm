@@ -25,8 +25,8 @@ export default function Commodities() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#174D25]/90 via-[#174D25]/75 to-[#3F7D20]/60"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4 w-full">
-          <span className="bg-[#3F7D20] text-[#B7D334] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider border border-[#7FAF28]/40">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center gap-6 w-full">
+          <span className="inline-block bg-[#3F7D20] text-[#B7D334] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider border border-[#7FAF28]/40">
             Produk & Hasil Panen
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight">
@@ -53,12 +53,12 @@ export default function Commodities() {
           <p className="text-base sm:text-lg text-[#174D25] font-semibold leading-relaxed">
             "Daftar di atas merupakan sebagian dari produk yang kami sediakan. Kami juga melayani berbagai komoditas hortikultura lainnya sesuai permintaan dan ketersediaan."
           </p>
-          <div className="pt-2">
+          <div className="pt-2 flex justify-center">
             <a
               href="https://wa.me/6285779682328?text=Halo%20TamaraAgro%20Farm,%20saya%20ingin%20menanyakan%20ketersediaan%20komoditas%20lainnya."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#174D25] hover:bg-[#3F7D20] text-white px-6 py-3 rounded-full text-sm font-bold shadow-md transition-all"
+              className="flex sm:inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-[#174D25] hover:bg-[#3F7D20] text-white px-6 py-3 rounded-full text-xs sm:text-sm font-bold shadow-md transition-all text-center"
             >
               <span>Tanyakan Permintaan Khusus via WhatsApp</span>
             </a>

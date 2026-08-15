@@ -2,7 +2,7 @@ export const achievements = [
   {
     id: 1,
     title: 'Juara 2 Pemuda Pelopor Bidang Pangan Jawa Barat',
-    year: '2023',
+    year: '',
     organizer: 'Pemerintah Provinsi Jawa Barat',
     image: '/pencapaian/Pencapaian1.png',
     description: 'Penghargaan atas keaktifan dan inovasi kepemimpinan muda dalam memelopori ketahanan pangan dan pemberdayaan masyarakat tani.'
