@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import ArticleCard from '../components/ArticleCard';
 import CTASection from '../components/CTASection';
@@ -7,6 +8,12 @@ import { publications } from '../data/publications';
 export default function Publication() {
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Publikasi Ilmiah & Riset Pertanian Hortikultura"
+        description="Daftar riset ilmiah dan publikasi akademis agribisnis dari TamaraAgro Farm. Pelajari analisis SWOT, rantai pasok sayuran, dan studi pemasaran hasil tani."
+        keywords="publikasi ilmiah pertanian, jurnal agribisnis Sukabumi, analisis SWOT agribisnis, riset hortikultura, TamaraAgro Farm"
+        canonical="/publikasi"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

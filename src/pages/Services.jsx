@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import ServiceCard from '../components/ServiceCard';
 import CTASection from '../components/CTASection';
@@ -7,6 +8,12 @@ import { services } from '../data/services';
 export default function Services() {
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Layanan Hortikultura & Solusi Agribisnis Terpadu"
+        description="Jelajahi portofolio layanan TamaraAgro Farm: budidaya hortikultura berkelanjutan, supplier sayuran segar B2B, konsultasi pertanian, kemitraan CSR, dan program edukasi."
+        keywords="layanan agribisnis, jasa pertanian Sukabumi, supplier sayuran B2B, konsultasi pertanian, CSR pertanian, magang pertanian"
+        canonical="/layanan"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

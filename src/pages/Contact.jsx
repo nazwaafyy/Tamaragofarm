@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import ContactCard from '../components/ContactCard';
 import CTASection from '../components/CTASection';
@@ -21,6 +22,12 @@ export default function Contact() {
 
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Hubungi Kami – Kontak & Lokasi TamaraAgro Farm"
+        description="Hubungi CV Tamara Agro Indonesia untuk kemitraan, pemesanan sayuran, atau konsultasi. Temukan alamat, email, dan nomor telepon TamaraAgro Farm Sukabumi."
+        keywords="kontak TamaraAgro Farm, alamat supplier sayuran Sukabumi, nomor telepon Tamara Agro, email perusahaan hortikultura, lokasi TamaraAgro Farm"
+        canonical="/kontak"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

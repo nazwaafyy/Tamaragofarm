@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import ProductCard from '../components/ProductCard';
 import CTASection from '../components/CTASection';
 import { products } from '../data/products';
@@ -6,6 +7,12 @@ import { products } from '../data/products';
 export default function Commodities() {
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Komoditas Hortikultura – Cabe, Tomat, Paprika & 20+ Sayuran Segar"
+        description="Tersedia lebih dari 20 komoditas hortikultura segar berkualitas dari TamaraAgro Farm Sukabumi: cabe merah keriting, tomat, paprika, buncis, edamame, baby corn, terong, jagung manis, dan lainnya."
+        keywords="komoditas hortikultura, cabe merah Sukabumi, tomat segar, paprika, buncis, edamame, sayuran segar Jawa Barat, TamaraAgro Farm"
+        canonical="/komoditas"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

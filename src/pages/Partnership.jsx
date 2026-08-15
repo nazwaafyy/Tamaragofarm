@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import CTASection from '../components/CTASection';
 import { Handshake, HeartHandshake, Building2, Sprout, Landmark, Users } from 'lucide-react';
@@ -39,6 +40,12 @@ export default function Partnership() {
 
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Kemitraan & CSR Pertanian Berdampak Sosial"
+        description="Jalin kemitraan agribisnis dan program CSR pertanian bersama TamaraAgro Farm. Kami membuka peluang sinergi budidaya hortikultura berkelanjutan dan pemberdayaan petani."
+        keywords="kemitraan pertanian Sukabumi, program CSR pertanian, CSR TamaraAgro Farm, kemitraan budidaya industri, pemberdayaan petani lokal"
+        canonical="/layanan/kemitraan-csr"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

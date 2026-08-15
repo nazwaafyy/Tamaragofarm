@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import CTASection from '../components/CTASection';
 import { Sprout, CheckCircle2, Cpu, TrendingUp, Users, ShieldCheck, ArrowRight } from 'lucide-react';
@@ -39,6 +40,12 @@ export default function Cultivation() {
 
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Budidaya Hortikultura – Praktik Pertanian Berkelanjutan"
+        description="Pelajari metode budidaya hortikultura di TamaraAgro Farm. Mulai dari persiapan lahan, persemaian, pemeliharaan, hingga panen menggunakan teknik pertanian modern."
+        keywords="budidaya hortikultura, cara tanam sayuran, pertanian berkelanjutan Sukabumi, teknik budidaya cabe tomat, TamaraAgro Farm"
+        canonical="/layanan/budidaya-hortikultura"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

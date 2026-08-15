@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import CTASection from '../components/CTASection';
 import { Truck, ShieldCheck, RefreshCw, Layers, Handshake, CheckCircle2 } from 'lucide-react';
@@ -39,6 +40,12 @@ export default function Supplier() {
 
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Supplier Sayuran & Hortikultura Segar Sukabumi"
+        description="TamaraAgro Farm menyediakan pasokan sayuran segar hortikultura berkualitas tinggi untuk retail modern, Horeca, e-grocery, dan mitra industri secara kontinu."
+        keywords="supplier sayuran Sukabumi, supplier sayur B2B, pasokan sayur supermarket, retail modern sayuran, supplier hortikultura"
+        canonical="/layanan/supplier-hortikultura"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

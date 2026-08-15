@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import Timeline from '../components/Timeline';
 import CTASection from '../components/CTASection';
@@ -36,6 +37,12 @@ export default function About() {
 
   return (
     <div className="pt-24 pb-12 space-y-20">
+      <SEO
+        title="Tentang TamaraAgro Farm – Profil Perusahaan Hortikultura"
+        description="Kenali CV Tamara Agro Indonesia: visi, misi, latar belakang, dan perjalanan kami memberdayakan petani lokal Sukabumi. Perusahaan agribisnis hortikultura berkomitmen pada ketahanan pangan dan pemberdayaan masyarakat tani."
+        keywords="profil TamaraAgro Farm, CV Tamara Agro Indonesia, tentang perusahaan hortikultura Sukabumi, visi misi agribisnis, petani lokal Sukaraja"
+        canonical="/tentang-kami"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

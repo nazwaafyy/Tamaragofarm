@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import {
   Sprout,
   Users,
@@ -50,6 +51,12 @@ export default function Home() {
 
   return (
     <div className="space-y-24 pb-12">
+      <SEO
+        title="Supplier Hortikultura & Agribisnis Sukabumi"
+        description="TamaraAgro Farm – perusahaan hortikultura Sukabumi yang menghadirkan sayuran segar berkualitas. Supplier cabe, tomat, paprika, edamame ke retail modern, HORECA & industri. Mitra petani lokal Sukaraja sejak 2021."
+        keywords="TamaraAgro Farm, supplier hortikultura Sukabumi, sayuran segar, agribisnis Jawa Barat, supplier cabe tomat, kemitraan petani lokal"
+        canonical="/"
+      />
 
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[85vh] flex items-center justify-center pt-28 pb-20 overflow-hidden">

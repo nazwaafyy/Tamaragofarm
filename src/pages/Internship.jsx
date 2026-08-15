@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import CTASection from '../components/CTASection';
 import TestimonialCard from '../components/TestimonialCard';
@@ -35,6 +36,12 @@ export default function Internship() {
 
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Program Magang & PKL Mahasiswa Pertanian"
+        description="Program magang dan PKL (Praktik Kerja Lapangan) di TamaraAgro Farm untuk siswa SMK/mahasiswa pertanian. Dapatkan pengalaman nyata di industri hortikultura modern."
+        keywords="magang pertanian Sukabumi, PKL agribisnis, tempat magang mahasiswa pertanian, lowongan magang hortikultura, TamaraAgro Farm"
+        canonical="/layanan/penelitian-magang-pkl"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

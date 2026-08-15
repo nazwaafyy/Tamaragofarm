@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import AchievementCard from '../components/AchievementCard';
 import CTASection from '../components/CTASection';
@@ -8,6 +9,12 @@ import { Trophy, Star } from 'lucide-react';
 export default function Achievements() {
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Pencapaian & Rekam Jejak TamaraAgro Farm"
+        description="Jelajahi berbagai pencapaian dan rekam jejak CV Tamara Agro Indonesia dalam industri hortikultura, termasuk penghargaan, sertifikasi, dan apresiasi dari mitra bisnis."
+        keywords="pencapaian TamaraAgro Farm, penghargaan agribisnis, rekam jejak hortikultura, sertifikasi pertanian Sukabumi"
+        canonical="/pencapaian"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

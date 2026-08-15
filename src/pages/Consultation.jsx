@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import CTASection from '../components/CTASection';
 import { Users, BarChart3, Calendar, ClipboardCheck, ShieldCheck } from 'lucide-react';
@@ -62,6 +63,12 @@ export default function Consultation() {
 
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Layanan Konsultasi Agribisnis & Pertanian"
+        description="Dapatkan layanan konsultasi agribisnis profesional dari pakar TamaraAgro Farm. Kami membantu perencanaan, analisis, dan pendampingan budidaya pertanian modern."
+        keywords="konsultasi agribisnis, layanan konsultasi pertanian, pendampingan petani, pakar agribisnis Sukabumi, TamaraAgro Farm"
+        canonical="/layanan/konsultasi-pertanian"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

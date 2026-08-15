@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
@@ -7,6 +8,12 @@ import { testimonials } from '../data/testimonials';
 export default function Testimonials() {
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Testimoni & Pengalaman Magang Penelitian"
+        description="Baca ulasan, testimoni, dan kisah sukses dari mahasiswa dan akademisi yang telah menjalani magang, PKL, atau riset pertanian di TamaraAgro Farm."
+        keywords="testimoni magang pertanian, ulasan magang Sukabumi, kisah mahasiswa PKL agribisnis, riset mahasiswa TamaraAgro"
+        canonical="/testimoni"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">

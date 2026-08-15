@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import SectionTitle from '../components/SectionTitle';
 import VideoCard from '../components/VideoCard';
 import CTASection from '../components/CTASection';
@@ -7,6 +8,12 @@ import { videoDocumentation } from '../data/documentation';
 export default function Documentation() {
   return (
     <div className="pt-24 pb-12 space-y-16">
+      <SEO
+        title="Dokumentasi & Galeri Kegiatan TamaraAgro Farm"
+        description="Galeri foto dan dokumentasi kegiatan operasional TamaraAgro Farm: proses panen, pengemasan, pelatihan petani, dan distribusi produk hortikultura."
+        keywords="galeri TamaraAgro Farm, dokumentasi panen sayuran, foto kegiatan pertanian, operasional agribisnis Sukabumi"
+        canonical="/dokumentasi"
+      />
       
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">
