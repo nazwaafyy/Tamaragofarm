@@ -19,7 +19,7 @@ export const services = [
     id: 'supplier-hortikultura',
     slug: 'supplier-hortikultura',
     title: 'Supplier Sayuran / Supplier Hortikultura',
-    image: '/layanan/Supplier-Sayuran.png',
+    image: '/layanan/Supplier-Sayuran.jpeg',
     shortDesc: 'Pasokan komoditas hortikultura segar dan terintegrasi untuk sektor supermarket, retail, horeca, hingga industri.',
     fullDesc: 'TamaraAgro Farm menyediakan pasokan hortikultura segar berkualitas melalui jaringan petani binaan dan sistem distribusi yang terintegrasi. Kami berkomitmen menghadirkan produk yang segar, berkualitas, dan tersedia secara berkelanjutan untuk memenuhi kebutuhan berbagai sektor.',
     iconName: 'Truck',
