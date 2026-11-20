@@ -14,7 +14,7 @@ export default function Documentation() {
         keywords="galeri TamaraAgro Farm, dokumentasi panen sayuran, foto kegiatan pertanian, operasional agribisnis Sukabumi"
         canonical="/dokumentasi"
       />
-      
+
       {/* Header Banner */}
       <section className="relative bg-[#174D25] text-white py-12 sm:py-16 min-h-[180px] sm:min-h-[240px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -44,7 +44,7 @@ export default function Documentation() {
         <SectionTitle
           eyebrow="Arsip Video"
           title="Dokumentasi Kegiatan & Podcast"
-          description="Klip inspiratif mengenai kiprah petani muda Gen Z, dokumenter pendek dari tanah ke jiwa, serta liputan edukasi tani."
+          description="Lihat berbagai dokumentasi kegiatan, perjalanan, dan cerita inspiratif TamaraAgro Farm dalam mengembangkan sektor pertanian Indonesia."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
